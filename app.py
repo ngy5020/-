@@ -29,7 +29,7 @@ col1, col2, col3 = st.columns([1, 2, 1])
 with col2:
     st.image("logo.png", use_container_width=True)
 
-st.markdown("<h3 style='text-align: center;'>2024 우수봉사자 조회</h3>", unsafe_allow_html=True)
+st.markdown("<h3 style='text-align: center;'>2026 우수봉사자 조회</h3>", unsafe_allow_html=True)
 name_input = st.text_input("", placeholder="성함을 입력하세요")
 
 if name_input:
