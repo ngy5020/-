@@ -76,7 +76,7 @@ with col2:
     except:
         st.markdown("<h2 style='text-align: center; color: #e74c3c;'>❤️ 이천시자원봉사센터</h2>", unsafe_allow_html=True)
 
-st.markdown("<h4 style='text-align: center; color: #333; margin-top: -10px;'>2024 우수봉사자 명예의 전당</h4>", unsafe_allow_html=True)
+st.markdown("<h4 style='text-align: center; color: #333; margin-top: -10px;'>2026 우수봉사자 명예의 전당</h4>", unsafe_allow_html=True)
 
 # 검색창 (글씨 크기 키움)
 name_input = st.text_input("", placeholder="성함을 입력하고 엔터를 치세요")
