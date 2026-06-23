@@ -66,7 +66,7 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 # [순서 1] '우수봉사자 조회' 제목이 맨 위에 진하게 나옵니다.
-st.markdown("<h1 class='main-title'>🌟 우수봉사자 명단 조회 🌟</h1>", unsafe_allow_html=True)
+st.markdown("<h1 class='main-title'>🌟 우수봉사자 조회 🌟</h1>", unsafe_allow_html=True)
 
 # 2. Secrets 명단 로드 및 쪼개기
 volunteer_raw = st.secrets.get("volunteer_list", "")
