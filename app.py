@@ -3,15 +3,15 @@ import streamlit as st
 # 1. 페이지 기본 설정
 st.set_page_config(page_title="우수봉사자 조회", page_icon="✨", layout="centered")
 
-# [강력 수정] 핸드폰 다크 모드 강제 해제 및 글자색 절대 고정 스타일
+# 핸드폰 다크 모드 강제 해제 및 글자색 절대 고정 스타일
 st.markdown("""
     <style>
-    /* 1. 스마트폰 시스템 설정을 무시하고 전체 배경을 강제로 무조건 흰색으로 고정 */
+    /* 스마트폰 시스템 설정을 무시하고 전체 배경을 강제로 무조건 흰색으로 고정 */
     .stApp, [data-testid="stAppViewContainer"], .main {
         background-color: #ffffff !important;
     }
     
-    /* 2. 메인 제목 글씨 (가장 위, 새까만 검은색 고정) */
+    /* 1. 메인 제목 글씨 (가장 위, 새까만 검은색 고정) */
     .main-title {
         text-align: center !important; 
         color: #000000 !important; 
@@ -21,14 +21,14 @@ st.markdown("""
         margin-bottom: 30px !important;
     }
     
-    /* 3. 입력창 바로 위 안내 문구 ("봉사자 성명을 입력해 주세요") */
+    /* 2. 입력창 바로 위 안내 문구 ("봉사자 성명을 입력해 주세요") */
     .stTextInput label p {
         color: #000000 !important;
         font-size: 20px !important;
         font-weight: 800 !important;
     }
     
-    /* 4. 입력창 및 입력하는 글자색 (흰색 바탕에 새까만 글씨 고정) */
+    /* 3. 입력창 및 입력하는 글자색 (흰색 바탕에 새까만 글씨 고정) */
     .stTextInput input { 
         font-size: 20px !important; 
         color: #000000 !important; 
@@ -62,11 +62,21 @@ st.markdown("""
         font-weight: 800 !important; 
         line-height: 1.7 !important; 
     }
+
+    /* 4. 맨 아래 추가된 1365 안내 문구 스타일 (진한 검은색, 중앙 정렬) */
+    .info-footer {
+        text-align: center !important;
+        color: #000000 !important;
+        font-size: 16px !important;
+        font-weight: 700 !important;
+        margin-top: 25px !important;
+        margin-bottom: 10px !important;
+    }
     </style>
 """, unsafe_allow_html=True)
 
-# [순서 1] '우수봉사자 조회' 제목이 맨 위에 진하게 나옵니다.
-st.markdown("<h1 class='main-title'>🌟 2026우수봉사자 조회 🌟</h1>", unsafe_allow_html=True)
+# [순서 1] '우수봉사자 조회' 제목
+st.markdown("<h1 class='main-title'>🌟 우수봉사자 명단 조회 🌟</h1>", unsafe_allow_html=True)
 
 # 2. Secrets 명단 로드 및 쪼개기
 volunteer_raw = st.secrets.get("volunteer_list", "")
@@ -106,8 +116,11 @@ if search_name:
 st.write("")
 st.write("")
 
-# [순서 4] 로고 이미지가 가장 아래에 배치됩니다.
+# [순서 4] 로고 이미지
 try:
     st.image("logo.png", use_container_width=True)
 except:
     pass
+
+# [순서 5] 맨 아래에 위치하는 1365 안내 문구
+st.markdown("<p class='info-footer'>📢 자세한 사항은 1365포털사이트를 통해 봉사실적을 확인하세요</p>", unsafe_allow_html=True)
