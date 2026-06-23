@@ -19,7 +19,7 @@ try:
 except:
     pass
 
-st.markdown("<h3 style='text-align: center; color: #343a40;'>우수봉사자 인증서 조회</h3>", unsafe_allow_html=True)
+st.markdown("<h3 style='text-align: center; color: #343a40;'>우수봉사자 조회</h3>", unsafe_allow_html=True)
 st.write("")
 
 # 3. [핵심 수정] Secrets에서 명단을 가져와 안전하게 쪼개기
